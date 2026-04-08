@@ -88,11 +88,35 @@ emails = [
 files = ['data1.csv', 'report.pdf', 'summary.csv', 'data2.txt']
 flag = True
 
+# for file in files:
+#     if not file.endswith('.csv'):
+#         print(f"{file} is not CSV")
+#         flag = False
+#         continue
+# else:
+#     if flag:
+#         print("All files are CSV")
+
+# Check whether any filename appears more than once
+# print "Duplicate found" otherwise print "All files are unique."
+files = [
+    'data.csv',
+    'report.csv',
+    'chart.csv',
+    'report.csv',
+    'summary.csv'
+]
+
 for file in files:
-    if not file.endswith('.csv'):
-        print(f"{file} is not CSV")
-        flag = False
-        continue
+    dup_count = 0
+    print(f"Processing {file}")
+    for dup_file in files:
+        # print(file,dup_file)
+        if file == dup_file:
+            dup_count = dup_count + 1
+            # print(dup_count)
+    if dup_count >= 2:
+        print("Duplicate files found!")
+        break
 else:
-    if flag:
-        print("All files are CSV")
+    print("No duplicate files!")
