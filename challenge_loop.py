@@ -35,11 +35,40 @@ names = ['john', 'maria', '', 'evelyn']
 
 
 # Skip weekends in calender loop
-days = ["sun", "mon", "tue", "wed"]
-weekends = ["sun", "sat"]
-for day in days:
-    if day in weekends:
-        continue
-    print(f"Workday: {day}")
+# days = ["sun", "mon", "tue", "wed"]
+# weekends = ["sun", "sat"]
+# for day in days:
+#     if day in weekends:
+#         continue
+#     print(f"Workday: {day}")
+
 
 # scan emails to block unsafe data from entering your system
+emails = [
+    'shahiarusha@gmail.com',
+    'datawithbaraa@outlook.de',
+    'DROP TABLE USERS;',
+    'hi@support.co'
+]
+
+# for email in emails:
+#     # check if there's a semi-colon(;) in email
+#     if ';' in email:
+#         print('SQL Injection Detected: Hacker Attack')
+#         break
+#     print(f"Processing email: {email}")
+
+
+# break: High/Critical Risk - Exit immediately: cost, security, integrity
+# continue: Medium Risk - Bad rows, Empty Files/Data, Skip special cases
+# pass: No Risk - Just a placeholder - Future planning for solution
+
+# for - else: else is executed only if for loop is completed
+# check for even number
+items = [1,9,5,7]
+for item in items:
+    if item % 2 == 0:
+        print("Even number is found:", item)
+        break
+else:
+    print("All numbers are odd.")
