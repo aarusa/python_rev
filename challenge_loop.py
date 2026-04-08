@@ -65,10 +65,34 @@ emails = [
 
 # for - else: else is executed only if for loop is completed
 # check for even number
-items = [1,9,5,7]
-for item in items:
-    if item % 2 == 0:
-        print("Even number is found:", item)
-        break
+# items = [1,9,5,7]
+# for item in items:
+#     if item % 2 == 0:
+#         print("Even number is found:", item)
+#         break
+# else:
+#     print("All numbers are odd.")
+
+# Check for missing names in list
+# names = ['Karma', 'Tuba', None, 'Mona']
+
+# for name in names:
+#     if name == None:
+#         print("Found a missing name.")
+#         break
+# else:
+#     print("No missing value.")
+
+
+# Check if all files are csv
+files = ['data1.csv', 'report.pdf', 'summary.csv', 'data2.txt']
+flag = True
+
+for file in files:
+    if not file.endswith('.csv'):
+        print(f"{file} is not CSV")
+        flag = False
+        continue
 else:
-    print("All numbers are odd.")
+    if flag:
+        print("All files are CSV")
